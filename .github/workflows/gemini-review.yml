@@ -96,4 +96,4 @@ jobs:
                 }
               }
             }
-          prompt: 'Please use the pull_request_read tool to read this PR. Analyze the code for bugs, security issues, and best practices. Then, use the add_comment_to_pending_review and pull_request_review_write tools to post your review directly.'
+          prompt: 'Please use the pull_request_read tool to read pull request #${{ github.event.pull_request.number || github.event.issue.number }}. Analyze the code for bugs, security issues, and best practices. Then, use the add_comment_to_pending_review and pull_request_review_write tools to post your review directly on pull request #${{ github.event.pull_request.number || github.event.issue.number }}.'
